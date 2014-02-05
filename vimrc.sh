@@ -2,7 +2,7 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 set autoindent
-colorscheme railscasts
+colorscheme solarized
 "enable ctrl-n for NERDTree
 map <C-n> :NERDTreeToggle<CR> 
 let NERDTreeShowHidden=1
