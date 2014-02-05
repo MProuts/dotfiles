@@ -46,7 +46,7 @@ set -o vi
     # Define some local colors
     local         RED="\[\033[0;31m\]" # This syntax is some weird bash color thing I never
     local   LIGHT_RED="\[\033[1;31m\]" # really understood
-    local        CHAR="☕"
+    local        CHAR="⚡"
     # ♥ ☆ - Keeping some cool ASCII Characters for reference
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
