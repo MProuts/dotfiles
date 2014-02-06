@@ -2,6 +2,7 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 set autoindent
+set background=dark
 colorscheme solarized
 "enable ctrl-n for NERDTree
 map <C-n> :NERDTreeToggle<CR> 
