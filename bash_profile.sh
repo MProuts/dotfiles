@@ -135,18 +135,51 @@ set -o vi
 
 # USE: desktop
 #      desktop subfolder
-function desktop {
+
+## Fluidsynth playmidi function
+  function playmidi {
+
+  SOUNDFONT='/Library/Application Support/fluidsynth/FluidR3_GM.sf2'
+
+  if [ -e "$SOUNDFONT" ]
+  then 
+
+    for i in "$@"
+    do 
+      if [ -e "$i" ]
+      then
+        (fluidsynth -i "$SOUNDFONT" "$i"  2>&1) >/dev/null
+      else
+        echo "[playmidi]: cannot find file at $i"   
+        return 1
+      fi  
+    done 
+  else
+    echo "[playmidi]: SOUNDFONT file not found at $SOUNDFONT"
+    return 1
+  fi  
+
+  }
+####
+                                                                            function desk {
   cd /Users/$USER/Desktop/$@
 }
 
-function flatiron {
-  cd /Users/$USER/Development/code/flatiron/$@
+function flat {
+  cd /Users/$USER/dev/flatiron/$@
 }
 
-function download {
+function dev {
+  cd /Users/$USER/dev/$@
+}
+
+function down {
   cd /Users/$USER/Downloads/$@
 }
 
+function proj {
+  cd /Users/$USER/dev/flatiron/projects/$@
+}
 # A function to easily grep for a matching process
 # USE: psg postgres
 function psg {
