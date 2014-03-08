@@ -180,6 +180,11 @@ function down {
 function proj {
   cd /Users/$USER/dev/flatiron/projects/$@
 }
+
+function labs {
+  cd /Users/$USER/dev/flatiron/labs/$@
+}
+
 # A function to easily grep for a matching process
 # USE: psg postgres
 function psg {
