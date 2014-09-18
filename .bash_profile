@@ -2,11 +2,12 @@ PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 CDPATH=~/dev/
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# For gem-open
+export GEM_EDITOR="vim"
 
 export PS1="\W ☕ "
 export GREP_OPTIONS='--color=always'
-export LSCOLORS="GxGxBxDxCxEgEdxbxgxcxd"
+# export LSCOLORS="GxGxBxDxCxEgEdxbxgxcxd"
 
 # Moved from /.bashrc
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -178,7 +179,7 @@ function down {
 }
 
 function proj {
-  cd /Users/$USER/dev/flatiron/projects/$@
+  cd /Users/$USER/dev/flatiron/proj/$@
 }
 
 function labs {
@@ -230,6 +231,7 @@ function extract () {
   alias gca="git commit -v -a"
   alias gb="git branch"
   alias gba="git branch -a"
+  alias gig="git ls-files --others -i --exclude-standard"
 
 
 # Final Configurations and Plugins
@@ -244,4 +246,5 @@ function extract () {
   # RVM
   # Mandatory loading of RVM into the shell
   # This must be the last line of your bash_profile always
-  [[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+[[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"  # This loads RVM into a shell session.
