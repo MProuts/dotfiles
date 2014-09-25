@@ -67,6 +67,15 @@ function ack_sub {
   ack -l $1 $3 | xargs perl -pi -E 's/'$1'/'$2'/g'
 }
 
+function rg {
+  rake routes | grep $1
+}
+
+# Prune merged branches
+function gpm {
+  git branch --merged | grep -v "\*" | grep -v "master" | xargs git branch -d
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
