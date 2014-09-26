@@ -48,30 +48,6 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby golang django scala gem history history-substring-search terminalapp brew nanoc)
-
-bindkey "\e0A" up-line-or-history
-bindkey "\eOB" down-line-or-history
-bindkey "\eOC" forward-char
-bindkey "\eOD" backward-char
-
-source $ZSH/oh-my-zsh.sh
-
-# Use Homebrew binaries
-export PATH=/usr/local/bin:$PATH
-
-function ack_sub {
-  ack -l $1 $3 | xargs perl -pi -E 's/'$1'/'$2'/g'
-}
-
-function rg {
-  rake routes | grep $1
-}
-
-# Prune merged branches
-function gpm {
-  git branch --merged | grep -v "\*" | grep -v "master" | xargs git branch -d
-}
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -92,27 +68,56 @@ function gpm {
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 
-set -o vi
+# SHELL CONFIGURATION
+# ===================
+plugins=(git ruby golang django scala gem history history-substring-search terminalapp brew nanoc)
 
-# Aggregate history across
+bindkey "\e0A" up-line-or-history
+bindkey "\eOB" down-line-or-history
+bindkey "\eOC" forward-char
+bindkey "\eOD" backward-char
+
+set -o vi
+# Aggregate history across sessions
 setopt APPEND_HISTORY
 
-# ALIASES
-# =======
-alias dev='cd /Users/$USER/dev/$@'
-alias logcheck='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
+# PATH
+# ====
 
-# git
-alias gst="git status"
-
+source $ZSH/oh-my-zsh.sh
+# Use Homebrew binaries
+export PATH=/usr/local/bin:$PATH
 # Add LilyPond binaries to path
-# =============================
-#
 export PATH=$PATH:/Applications/LilyPond.app/Contents/Resources/bin
+
 # ENV VARIABLES
 # =============
 source ~/.secrets
-
 PROMPT="$PROMPT"$'\n'"🐌  "
 
+# ALIASES
+# =======
+
+alias dev='cd /Users/$USER/dev/$@'
+alias logcheck='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
+alias dotfiles='cd /Users/$USER/dotfiles/$@'
+
+# FUNCTIONS
+# =========
+
+function ack_sub {
+  ack -l $1 $3 | xargs perl -pi -E 's/'$1'/'$2'/g'
+}
+
+function rg {
+  rake routes | grep $1
+}
+
+# Prune merged branches
+function gpm {
+  git branch --merged | grep -v "\*" | grep -v "master" | xargs git branch -d
+}
+
+# RVM
+# ===
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scription
