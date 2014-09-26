@@ -57,9 +57,6 @@ bindkey "\eOD" backward-char
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-export PATH="/Users/michaelprouty/.rvm/gems/ruby-2.0.0-p451/bin:/Users/michaelprouty/.rvm/gems/ruby-2.0.0-p451@global/bin:/Users/michaelprouty/.rvm/rubies/ruby-2.0.0-p451/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/michaelprouty/.rvm/bin:/Users/michaelprouty/.rvm/bin"
-
 # Use Homebrew binaries
 export PATH=/usr/local/bin:$PATH
 
@@ -117,3 +114,5 @@ export PATH=$PATH:/Applications/LilyPond.app/Contents/Resources/bin
 source ~/.secrets
 
 PROMPT="$PROMPT"$'\n'"🐌  "
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scription
