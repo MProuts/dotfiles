@@ -113,6 +113,14 @@ function rg {
   rake routes | grep $1
 }
 
+# GIT
+# ===
+
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gs="git status"
+alias gb="git branch"
+
 # Prune merged branches
 function gpm {
   git branch --merged | grep -v "\*" | grep -v "master" | xargs git branch -d
