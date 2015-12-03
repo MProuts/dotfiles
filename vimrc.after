@@ -7,14 +7,12 @@ let NERTTreeQuitOnOpen=1
 " key bindings
 " ============
 map <C-n> :NERDTreeToggle<CR>
-map <S-s> :w<CR>
 map <S-q> :wqa<CR>
 map <S-w> :e
 map <S-Left> :tabp<CR>
 map <S-k> :let @/ = ""<CR>
 map <S-Right> :tabn<CR>
 map <C-o> :tabnew<CR>:e 
-map <S-n> :e 
 
 map <silent><F3> :NEXTCOLOR<cr>
 map <silent><F2> :PREVCOLOR<cr>

@@ -100,26 +100,52 @@ PROMPT="$PROMPT"$'\n'"🐌  "
 
 alias dev='cd /Users/$USER/dev/$@'
 alias logcheck='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
+alias sisters='cd /Users/$USER/dev/sisters/$@'
 alias dotfiles='cd /Users/$USER/dotfiles/$@'
+alias writing='cd /Users/$USER/writing/$@'
 
 # FUNCTIONS
 # =========
 
+function ember {
+  cd /Users/${USER}/dev/logcheck/logcheck-web/app/assets/javascripts/ember_code
+}
+
 function ack_sub {
-  ack -l $1 $3 | xargs perl -pi -E 's/'$1'/'$2'/g'
+  ack -l $1 $3 | xargs perl -pi -E 's/'$1'/'$2'/gc'
+}
+
+function ack_capture {
+  ack -l $1 | echo $1
 }
 
 function rg {
   rake routes | grep $1
 }
 
+function fs {
+  foreman start
+}
+
+function rc {
+  rails console
+}
+
+function rp {
+  pry-remote
+}
+
+alias bx='bundle exec'
+
 # GIT
 # ===
 
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gs="git status"
-alias gb="git branch"
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gs='git status'
+alias gbl='git branch --list'
+alias gbm='git branch -m'
+alias gcm='git checkout master'
 
 # Prune merged branches
 function gpm {
