@@ -1,11 +1,21 @@
+" Make vim color work inside tmux
+set term=screen-256color
+
+" Make arrow keys work inside of tmux
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
 color solarized
 set background=dark
 set clipboard=unnamed
 let NERDTreeShowHidden=1
 let NERTTreeQuitOnOpen=1
 
-" key bindings
-" ============
 map <C-n> :NERDTreeToggle<CR>
 map <S-q> :wqa<CR>
 map <S-w> :e
