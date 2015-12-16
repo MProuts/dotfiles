@@ -23,6 +23,7 @@ map <S-Left> :tabp<CR>
 map <S-k> :let @/ = ""<CR>
 map <S-Right> :tabn<CR>
 map <C-o> :tabnew<CR>:e 
+map <C-i> :tabnew<CR>
 
 map <silent><F3> :NEXTCOLOR<cr>
 map <silent><F2> :PREVCOLOR<cr>
