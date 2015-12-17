@@ -135,6 +135,12 @@ function rp {
   pry-remote
 }
 
+function mysql_sock() {
+  mysqladmin variables | grep socket
+}
+
+alias ls="ls -lah"
+
 alias bx='bundle exec'
 
 # GIT
