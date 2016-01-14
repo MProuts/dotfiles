@@ -18,7 +18,6 @@ let NERTTreeQuitOnOpen=1
 
 map <C-n> :NERDTreeToggle<CR>
 map <S-q> :wqa<CR>
-map <S-w> :e
 map <S-Left> :tabp<CR>
 map <S-k> :let @/ = ""<CR>
 map <S-Right> :tabn<CR>

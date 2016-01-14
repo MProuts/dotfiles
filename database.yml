@@ -9,7 +9,7 @@ development:
   # Localhost
   # =========
   password: "logcheck"
-  socket: /tmp/mysql.sock
+  socket: /opt/local/var/run/mysql55/mysqld.sock
 
   # Staging/Production
   # ==================
@@ -28,4 +28,4 @@ test:
   pool: 5
   username: logcheck
   password: logcheck
-  socket: /tmp/mysql.sock
+  socket: /opt/local/var/run/mysql55/mysqld.sock
