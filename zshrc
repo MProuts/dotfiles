@@ -100,8 +100,7 @@ PROMPT="$PROMPT"$'\n'"🐌  "
 
 alias dev='cd /Users/$USER/dev/$@'
 alias logcheck='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
-alias sisters='cd /Users/$USER/dev/sisters/$@'
-alias dotfiles='cd /Users/$USER/dotfiles/$@'
+alias dots='cd /Users/$USER/dotfiles/$@'
 alias writing='cd /Users/$USER/writing/$@'
 
 # FUNCTIONS
