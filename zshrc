@@ -158,6 +158,13 @@ function gpm {
   git branch --merged | grep -v "\*" | grep -v "master" | xargs git branch -d
 }
 
+# MacPorts 
+# ========
+# adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
 # RVM
 # ===
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scription
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

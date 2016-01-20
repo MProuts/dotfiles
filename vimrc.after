@@ -10,7 +10,8 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
-color solarized
+color tomorrow-night
+
 set background=dark
 set clipboard=unnamed
 let NERDTreeShowHidden=1
