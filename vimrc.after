@@ -89,3 +89,7 @@ set nolist
 set listchars=eol:\$
 
 set shortmess+=A
+
+" Suppress “No write since last change” message when traversing changed
+" buffers.  (This way, we can make changes to several buffers using argdo.)
+set hidden

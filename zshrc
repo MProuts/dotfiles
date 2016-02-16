@@ -102,7 +102,7 @@ alias dev='cd /Users/$USER/dev/$@'
 alias logcheck='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
 alias dotfiles='cd /Users/$USER/dotfiles/$@'
 alias vim_prac='cd /Users/$USER/dev/practice/vim/$@'
-alias typing='cd /Users/$USER/dev/typing/$@'
+alias typing='cd /Users/$USER/dev/practice/typing/$@'
 
 # FUNCTIONS
 # =========
