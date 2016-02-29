@@ -14,10 +14,17 @@ color tomorrow-night
 
 set background=dark
 set clipboard=unnamed
-let NERDTreeShowHidden=1
-let NERTTreeQuitOnOpen=1
+" let NERDTreeShowHidden=1
+" let NERTTreeQuitOnOpen=1
+" let NERDTreeHijackNetrw=1
+" map <C-n> :NERDTreeToggle<CR>
 
-map <C-n> :NERDTreeToggle<CR>
+" Fix ambiguous :E for :Explore
+cabbrev E Explore
+
+" Expand %% to current biffer directory in command line mode
+cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 map <S-q> :wqa<CR>
 map <S-Left> :tabp<CR>
 map <S-k> :let @/ = ""<CR>

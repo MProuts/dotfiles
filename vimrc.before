@@ -1,0 +1,6 @@
+" disable nerdtree + netrw when loading MacVim,
+" as we can use alloy's build with the sidebar
+" https://github.com/alloy/macvim
+"
+call janus#disable_plugin('nerdtree')
+
