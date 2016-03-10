@@ -141,6 +141,9 @@ function mysql_sock() {
 
 alias ls="ls -lah"
 
+# provides a convenient way to figure out which PID is listening on a particular port
+alias lsof="lsof -n -P -i"
+
 alias bx='bundle exec'
 
 # GIT
