@@ -30,7 +30,7 @@ map <S-k> :let @/ = ""<CR>
 
 map <S-Left> :bp<CR>
 map <S-Right> :bn<CR>
-map <C-o> :e 
+map <leader>o :e 
 
 " map <C-o> :tabnew<CR>:e 
 " map <C-i> :tabnew<CR>
