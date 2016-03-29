@@ -19,11 +19,20 @@ set clipboard=unnamed
 " let NERDTreeHijackNetrw=1
 " map <C-n> :NERDTreeToggle<CR>
 
+" replace NERDTree with builtin newrw
+map <C-n> :E<CR>
+
 " Fix ambiguous :E for :Explore
 cabbrev E Explore
 
 " Expand %% to current biffer directory in command line mode
 cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" Use 'cp' in normal mode to copy the Current Path into the clipboard
+nmap cp :let @* = expand("%")<CR>
+
+" Use 'cfp' in normal mode to copy the Current Full Path into the clipboard
+nmap cfp :let @* = expand("%:p")<CR>
 
 map <S-q> :wqa<CR>
 map <S-k> :let @/ = ""<CR>
