@@ -41,38 +41,6 @@ map <S-Left> :bp<CR>
 map <S-Right> :bn<CR>
 map <leader>o :e 
 
-" map <C-o> :tabnew<CR>:e 
-" map <C-i> :tabnew<CR>
-
-" Select a buffer by pressing <F2> followed by buffer name
-" map <F2> :ls<CR>:b<Space>
-
-" map <silent><F3> :NEXTCOLOR<cr>
-" map <silent><F2> :PREVCOLOR<cr>
-"nnoremap <Leader>n :call Step_color()<CR>
-"nnoremap <Leader>ns :source ~/.janus/colorstepper/plugin/colorstepper.vim<CR>
-"nnoremap <Leader>o :echo g:colors_name<CR>
-"nnoremap <Leader>p :call Step_color_back()<CR>
-
-"
-function! LilyPond()
-    silent !clear
-    let filename=bufname("%")
-    silent execute "!lilypond " . filename
-    silent execute "!open -g " . substitute(filename, ".ly", ".pdf", "")
-    redraw!
-endfunction
-
-nnoremap <buffer> <localleader>l :call LilyPond()<cr>
-
-" LilyPond
-" ========
-filetype off
-set runtimepath+=/Applications/LilyPond.app/Contents/Resources/share/lilypond/current/vim/
-filetype on
-syntax on
-
-
 " something for tmux
 " ==================
 "
