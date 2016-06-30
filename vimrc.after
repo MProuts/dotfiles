@@ -40,7 +40,7 @@ map <S-k> :let @/ = ""<CR>
 map <S-Left> :bp<CR>
 map <S-Right> :bn<CR>
 map <leader>o :e 
-map <C-i> :CtrlPBuffer<CR>
+map <C-n> :CtrlPBuffer<CR>
 
 " something for tmux
 " ==================
