@@ -40,7 +40,7 @@ map <S-k> :let @/ = ""<CR>
 map <S-Left> :bp<CR>
 map <S-Right> :bn<CR>
 map <leader>o :e 
-map <C-i> :CtrlPBuffer<CR>
+map <C-n> :CtrlPBuffer<CR>
 
 " something for tmux
 " ==================
@@ -86,3 +86,8 @@ set shortmess+=A
 set hidden
 
 set wrap
+
+" Make sure files aren't hidden by ctrlp
+"
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
