@@ -166,6 +166,7 @@ function gpm {
 # ========
 # adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH="/Users/michaelprouty/Library/Python/2.7/bin:$PATH"
 
 # RVM
 # ===
