@@ -92,3 +92,9 @@ set wrap
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 set wildignore+=*/tmp/*,*/log/*,*/public/logcheck-*,*/public/ckeditor-*
+
+" Start interactive EasyAlign in visual mode (e.g. vipgl)
+xmap gl <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. glip)
+nmap gl <Plug>(EasyAlign)

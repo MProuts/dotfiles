@@ -108,7 +108,7 @@ alias typing='cd /Users/$USER/dev/practice/typing/$@'
 # FUNCTIONS
 # =========
 
-function ember {
+function logcheck_ember {
   cd /Users/${USER}/dev/logcheck/logcheck-web/app/assets/javascripts/ember_code
 }
 
