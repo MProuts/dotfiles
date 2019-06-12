@@ -89,6 +89,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:$PATH
 # Add LilyPond binaries to path
 export PATH=$PATH:/Applications/LilyPond.app/Contents/Resources/bin
+# Add python executables to the path
+export PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin
 
 # ENV VARIABLES
 # =============
@@ -162,7 +164,7 @@ function gpm {
   git branch --merged | grep -v "\*" | grep -v "master" | xargs git branch -d
 }
 
-# MacPorts 
+# MacPorts
 # ========
 # adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
