@@ -100,3 +100,11 @@ xmap gl <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. glip)
 nmap gl <Plug>(EasyAlign)
+
+" Emmet.vim
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends': 'jsx',
+\      'quote_char': "'",
+\  },
+\}
