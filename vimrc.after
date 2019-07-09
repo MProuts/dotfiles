@@ -108,3 +108,8 @@ let g:user_emmet_settings = {
 \      'quote_char': "'",
 \  },
 \}
+
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 1
+let g:ale_set_highlights = 0
