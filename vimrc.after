@@ -86,6 +86,7 @@ set shortmess+=A
 set hidden
 
 set wrap
+set textwidth=80
 
 " Make sure files aren't hidden by ctrlp
 "
