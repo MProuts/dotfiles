@@ -86,15 +86,31 @@ set shortmess+=A
 set hidden
 
 set wrap
+set textwidth=80
 
 " Make sure files aren't hidden by ctrlp
 "
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
-set wildignore+=*/tmp/*,*/log/*,*/public/logcheck-*,*/public/ckeditor-*,*public/packs/*
+set wildignore+=*/tmp/*,*/log/*,*/public/logcheck-*,*/public/ckeditor-*,*/public/packs/*
+" Ignore compiled ember source
+set wildignore+=*/dist/*,*/node_modules/*
 
 " Start interactive EasyAlign in visual mode (e.g. vipgl)
 xmap gl <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. glip)
 nmap gl <Plug>(EasyAlign)
+
+" Emmet.vim
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends': 'jsx',
+\      'quote_char': "'",
+\  },
+\}
+
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 1
+let g:ale_set_highlights = 0

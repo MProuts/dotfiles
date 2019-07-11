@@ -3,4 +3,4 @@
 " https://github.com/alloy/macvim
 "
 call janus#disable_plugin('nerdtree')
-
+call janus#disable_plugin('syntastic')
