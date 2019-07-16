@@ -188,17 +188,17 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Yarn
+# ====
+export PATH="$(yarn global bin):$PATH"
+
 # NVM
 # ===
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Yarn
-# ====
-export PATH="$(yarn global bin):$PATH"
-
-# Script to read .nvmrc file and pick approprate node version
+# Load node version from .nvmrc
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
