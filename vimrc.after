@@ -10,7 +10,7 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
-color tomorrow-night
+color gruvbox
 
 set background=dark
 set clipboard=unnamed
