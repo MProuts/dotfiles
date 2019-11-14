@@ -107,6 +107,10 @@ alias logcheck='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
 alias lw='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
 alias li='cd /Users/$USER/dev/logcheck/logcheck-ios/$@'
 alias dotfiles='cd /Users/$USER/dotfiles/$@'
+alias fs='foreman start'
+alias zrc='vim ~/.zshrc'
+alias vrc='vim ~/.vimrc'
+alias sz='source ~/.zshrc'
 
 # FUNCTIONS
 # =========
