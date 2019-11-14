@@ -117,12 +117,6 @@ function path(){
   echo $PATH | tr ":" "\n" | nl
 }
 
-# ZSH CONFIG
-# ==========
-bindkey -e
-bindkey '^[^[[D' forward-word
-bindkey '^[^[[C' backward-word
-
 # VENDOR STUFF
 # ============
 # Hat tip: https://medium.com/@caulfieldOwen/youre-missing-out-on-a-better-mac-terminal-experience-d73647abf6d7
