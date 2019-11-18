@@ -103,9 +103,10 @@ source $ZSH/oh-my-zsh.sh
 # =======
 alias ls="ls -a"
 alias dev='cd /Users/$USER/dev/$@'
-alias logcheck='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
+alias logcheck='cd /Users/$USER/dev/logcheck/$@'
 alias lw='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
 alias li='cd /Users/$USER/dev/logcheck/logcheck-ios/$@'
+alias inf='cd /Users/$USER/dev/logcheck/infrastructure/$@'
 alias dotfiles='cd /Users/$USER/dotfiles/$@'
 alias fs='foreman start'
 alias zrc='vim ~/.zshrc'

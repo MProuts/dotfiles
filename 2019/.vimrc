@@ -1,13 +1,6 @@
 " ==============
 " vanilla config
 " ==============
-" turn on syntax highlighting and set colorscheme
-syntax on
-
-colorscheme gruvbox
-
-" map :W to write in case you hold down shift too long when typing :w
-command! W  write
 
 " move lines around with ctrl-(j|k)
 " ---------------------------------
@@ -37,6 +30,25 @@ set directory^=~/.vim/_swap//   " where to put swap files (must create this dire
 " ------------
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
+
+" general
+" -------
+" turn on syntax highlighting and set colorscheme
+syntax on
+" set colorscheme
+colorscheme gruvbox
+" map :W to write in case you hold down shift too long when typing :w
+command! W  write
+" show line numbers
+set number
+" suppress “No write since last change” message
+set hidden
+" wrap long lines
+set wrap
+" set max width for formatting
+set textwidth=80
+" attach the system clipboard to the unnamed register
+set clipboard=unnamed
 
 " =============
 " plugin config
@@ -71,5 +83,7 @@ call plug#begin('~/.vim/plugs')
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+" Provides [b shortcuts for switching between buffers, args, etc
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
