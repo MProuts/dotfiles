@@ -1,23 +1,13 @@
-" ==============
-" vanilla config
-" ==============
-
-" move lines around with ctrl-(j|k)
-" ---------------------------------
-"
-" normal mode
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-" eol       allow backspacing over line breaks (join lines)
-" visual mode
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+" ======
+" config
+" ======
 
 " backspacing
 " -----------
 " indent    allow backspacing over autoindent
 " start     allow backspacing over the start of insert; CTRL-W and CTRL-U
 "           stop once at the start of insert.
+" eol       allow backspacing over line breaks (join lines)
 set backspace=indent,eol,start
 
 " swapfiles
@@ -37,8 +27,6 @@ set directory^=~/.vim/_swap//   " where to put swap files (must create this dire
 syntax on
 " set colorscheme
 colorscheme gruvbox
-" map :W to write in case you hold down shift too long when typing :w
-command! W  write
 " show line numbers
 set number
 " suppress “No write since last change” message
@@ -49,6 +37,28 @@ set wrap
 set textwidth=80
 " attach the system clipboard to the unnamed register
 set clipboard=unnamed
+
+" key bindings
+" ------------
+" map :W to write (in case you hold down shift)
+command! W w 
+command! Wq wq
+" fix ambiguous :E for :Explore
+cabbrev E Explore
+" expand %% to current buffer directory in command
+cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+" use 'cp' in normal mode to copy the current path
+nmap cp :let @* = expand("%")<CR>
+" edit config
+nnoremap gec :e $MYVIMRC<CR>
+" reload config
+nnoremap grc :so $MYVIMRC<CR>
+" move lines in normal mode
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+" move lines in visual mode
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " =============
 " plugin config
@@ -66,6 +76,19 @@ nmap gl <Plug>(EasyAlign)
 " --------------
 "  use " comment style for vim files
 autocmd FileType vim setlocal commentstring=\"\ %s
+
+" ctrl-p
+" ------
+" bind ctrl-n to show open buffers in ctrlp
+map <C-n> :CtrlPBuffer<CR>
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+" Ignore ignore certain directories from ctrl-p searches
+" TODO: We also want to ignore these with ack...
+set wildignore+=*/tmp/*
+set wildignore+=*/logcheck-web/log/*,*/public/logcheck-*
+set wildignore+=*/public/ckeditor-*,*/public/packs/*
+set wildignore+=*/coverage/*,*/node_modules/*
 
 " ===================
 " plugin installation
@@ -85,5 +108,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 " Provides [b shortcuts for switching between buffers, args, etc
 Plug 'tpope/vim-unimpaired'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
