@@ -90,6 +90,24 @@ set wildignore+=*/logcheck-web/log/*,*/public/logcheck-*
 set wildignore+=*/public/ckeditor-*,*/public/packs/*
 set wildignore+=*/coverage/*,*/node_modules/*
 
+" emmet
+" -----
+" Add abbreviations for jsx
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends': 'jsx',
+\      'quote_char': "'",
+\  },
+\}
+
+" ale
+" ---
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_column_always = 1
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 1
+let g:ale_set_highlights = 0
+
 " ===================
 " plugin installation
 " ===================
@@ -109,5 +127,7 @@ Plug 'tpope/vim-surround'
 " Provides [b shortcuts for switching between buffers, args, etc
 Plug 'tpope/vim-unimpaired'
 Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+Plug 'dense-analysis/ale'
 
 call plug#end()
