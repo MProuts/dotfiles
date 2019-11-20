@@ -129,5 +129,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'dense-analysis/ale'
+" Syntax highlighting
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
