@@ -41,7 +41,7 @@ set clipboard=unnamed
 set tabstop=2
 set shiftwidth=2
 " convert tabs to spaces
-expandtab
+set expandtab
 
 " key bindings
 " ------------
