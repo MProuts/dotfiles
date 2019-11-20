@@ -37,6 +37,11 @@ set wrap
 set textwidth=80
 " attach the system clipboard to the unnamed register
 set clipboard=unnamed
+" tab measures 2 spaces
+set tabstop=2
+set shiftwidth=2
+" convert tabs to spaces
+expandtab
 
 " key bindings
 " ------------
