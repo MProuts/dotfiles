@@ -138,7 +138,10 @@ prompt spaceship
 
 # rebel alliance symbol
 SPACESHIP_CHAR_PREFIX="\uf1d0 "
+SPACESHIP_NODE_SHOW='false'
+SPACESHIP_RUBY_SHOW='false'
+# Add newline before command exec timing
+SPACESHIP_EXEC_TIME_PREFIX='
+took '
 # space shuttle symbol
 # SPACESHIP_CHAR_SYMBOL="\uf197  "
-
-

@@ -50,6 +50,8 @@ command! W w
 command! Wq wq
 " fix ambiguous :E for :Explore
 cabbrev E Explore
+" <leader> o to open a file
+map <leader>o :e 
 " expand %% to current buffer directory in command
 cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " use 'cp' in normal mode to copy the current path
@@ -133,8 +135,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'kien/ctrlp.vim'
 Plug 'mattn/emmet-vim'
+" Show lint errors in the gutter
 Plug 'dense-analysis/ale'
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'
+" Show git diff in the gutter
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
