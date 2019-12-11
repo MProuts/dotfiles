@@ -51,7 +51,8 @@ set directory^=~/.vim/_swap//   " where to put swap files (must create this dire
 
 " highlighting
 " ------------
-:highlight ExtraWhitespace ctermbg=red guibg=red
+:autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+" :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 
 " general
