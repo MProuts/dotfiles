@@ -1,3 +1,36 @@
+" ===================
+" plugin installation
+" ===================
+" https://github.com/junegunn/vim-plug
+"
+" To install plugins:
+" 1) source ~/.vimrc
+" 2) :PlugInstall
+
+call plug#begin('~/.vim/plugs')
+" Make sure you use single quotes
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+" Provides [b shortcuts for switching between buffers, args, etc
+Plug 'tpope/vim-unimpaired'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+" Show lint errors in the gutter
+Plug 'dense-analysis/ale'
+" Syntax highlighting
+Plug 'sheerun/vim-polyglot'
+" Show git diff in the gutter
+Plug 'airblade/vim-gitgutter'
+" Colorscheme
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+" NOTE: ^ This section needs to be first since some of the configuration below
+" depends on plugins being installed, e.g. colorscheme
+
 " ======
 " config
 " ======
@@ -114,32 +147,3 @@ let g:ale_sign_column_always = 1
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 1
 let g:ale_set_highlights = 0
-
-" ===================
-" plugin installation
-" ===================
-" https://github.com/junegunn/vim-plug
-"
-" To install plugins:
-" 1) source ~/.vimrc
-" 2) :PlugInstall
-
-call plug#begin('~/.vim/plugs')
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-" Provides [b shortcuts for switching between buffers, args, etc
-Plug 'tpope/vim-unimpaired'
-Plug 'kien/ctrlp.vim'
-Plug 'mattn/emmet-vim'
-" Show lint errors in the gutter
-Plug 'dense-analysis/ale'
-" Syntax highlighting
-Plug 'sheerun/vim-polyglot'
-" Show git diff in the gutter
-Plug 'airblade/vim-gitgutter'
-
-call plug#end()
