@@ -131,13 +131,15 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # SPACESHIP
 # =========
+# NOTE: This configuration assumes you install spaceship using NPM
+# % npm install -g spaceship-prompt
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
 
-# rebel alliance symbol
-SPACESHIP_CHAR_PREFIX="\uf1d0 "
+SPACESHIP_CHAR_SYMBOL="%%"
+SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_NODE_SHOW='false'
 SPACESHIP_RUBY_SHOW='false'
 # Add newline before command exec timing
