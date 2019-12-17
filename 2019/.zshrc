@@ -107,6 +107,7 @@ alias logcheck='cd /Users/$USER/dev/logcheck/$@'
 alias lw='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
 alias li='cd /Users/$USER/dev/logcheck/logcheck-ios/$@'
 alias inf='cd /Users/$USER/dev/logcheck/infrastructure/$@'
+alias api-samps='cd /Users/$USER/dev/logcheck/logcheck-api-samples/$@'
 alias dotfiles='cd /Users/$USER/dotfiles/$@'
 alias fs='foreman start'
 alias zrc='vim ~/.zshrc'
@@ -138,6 +139,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -U promptinit; promptinit
 prompt spaceship
 
+SPACESHIP_PROMPT_ADD_NEWLINE='false'
 SPACESHIP_CHAR_SYMBOL="%%"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_NODE_SHOW='false'
