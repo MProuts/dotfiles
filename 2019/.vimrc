@@ -76,6 +76,8 @@ set tabstop=2
 set shiftwidth=2
 " convert tabs to spaces
 set expandtab
+" disable folding
+set nofoldenable
 
 " key bindings
 " ------------
