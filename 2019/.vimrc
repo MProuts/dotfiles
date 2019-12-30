@@ -84,6 +84,8 @@ set expandtab
 set ignorecase
 " make search pattern case sensitive if they include a capital letter
 set smartcase
+" disable folding
+set nofoldenable
 
 " key bindings
 " ------------

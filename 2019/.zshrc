@@ -107,7 +107,7 @@ alias logcheck='cd /Users/$USER/dev/logcheck/$@'
 alias lw='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
 alias li='cd /Users/$USER/dev/logcheck/logcheck-ios/$@'
 alias inf='cd /Users/$USER/dev/logcheck/infrastructure/$@'
-alias api-samps='cd /Users/$USER/dev/logcheck/logcheck-api-samples/$@'
+alias samps='cd /Users/$USER/dev/logcheck/logcheck-api-samples/$@'
 alias dotfiles='cd /Users/$USER/dotfiles/$@'
 alias fs='foreman start'
 alias zrc='vim ~/.zshrc'
@@ -154,3 +154,8 @@ took '
 # ===
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# RVM
+# ===
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
