@@ -51,9 +51,13 @@ set directory^=~/.vim/_swap//   " where to put swap files (must create this dire
 
 " highlighting
 " ------------
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+" highlight search matches
+set hlsearch
+" clear search highlight
+map <C-l> :let @/ = ""<CR>
 
 " general
 " -------
@@ -76,6 +80,10 @@ set tabstop=2
 set shiftwidth=2
 " convert tabs to spaces
 set expandtab
+" make search patterns case insensitive
+set ignorecase
+" make search pattern case sensitive if they include a capital letter
+set smartcase
 
 " key bindings
 " ------------
