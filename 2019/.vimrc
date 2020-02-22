@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugs')
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 " Provides [b shortcuts for switching between buffers, args, etc
 Plug 'tpope/vim-unimpaired'
 Plug 'kien/ctrlp.vim'
@@ -86,6 +87,8 @@ set ignorecase
 set smartcase
 " disable folding
 set nofoldenable
+" enable enhanced matching e.g. between do/end in ruby
+runtime macros/matchit.vim
 
 " key bindings
 " ------------
