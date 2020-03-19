@@ -27,6 +27,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 " Colorscheme
 Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 " NOTE: ^ This section needs to be first since some of the configuration below
@@ -65,7 +66,10 @@ map <C-l> :let @/ = ""<CR>
 " turn on syntax highlighting and set colorscheme
 syntax on
 " set colorscheme
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme solarized
+set background=light
+
 " show line numbers
 set number
 " suppress “No write since last change” message
