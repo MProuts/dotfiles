@@ -1,3 +1,7 @@
+
+let g:gruvbox_contrast_light='hard'
+let g:gruvbox_contrast_dark='hard'
+
 " ===================
 " plugin installation
 " ===================
@@ -27,7 +31,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 " Colorscheme
 Plug 'morhetz/gruvbox'
-Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 " NOTE: ^ This section needs to be first since some of the configuration below
@@ -66,9 +69,14 @@ map <C-l> :let @/ = ""<CR>
 " turn on syntax highlighting and set colorscheme
 syntax on
 " set colorscheme
-" colorscheme gruvbox
-colorscheme solarized
-set background=light
+colorscheme gruvbox
+set background=dark
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 
 " show line numbers
 set number
