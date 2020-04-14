@@ -117,11 +117,17 @@ alias sz='source ~/.zshrc'
 # FUNCTIONS
 # =========
 
-function path(){
+function path {
   # - tr 'translates' colons in PATH to newlines
   # - nl adds line numbers to the output
   echo $PATH | tr ":" "\n" | nl
 }
+
+# Prune merged branches
+function gpm {
+  git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d
+}
+
 
 # VENDOR STUFF
 # ============
