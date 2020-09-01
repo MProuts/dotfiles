@@ -114,6 +114,11 @@ alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias sz='source ~/.zshrc'
 
+# Python/Django aliases
+alias asp='cd /Users/$USER/dev/asp-django/asp/$@'
+alias py='python3'
+alias pym='python3 manage.py'
+
 # FUNCTIONS
 # =========
 
@@ -155,6 +160,10 @@ SPACESHIP_EXEC_TIME_PREFIX='
 took '
 # space shuttle symbol
 # SPACESHIP_CHAR_SYMBOL="\uf197  "
+
+# Asylum Seekers Project
+# ======================
+export DJANGO_SETTINGS_MODULE='asp.dev-settings'
 
 # NVM
 # ===
