@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/michaelprouty/.oh-my-zsh"
-
+export EDITOR="vim"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -118,6 +118,7 @@ alias sz='source ~/.zshrc'
 alias asp='cd /Users/$USER/dev/asp-django/asp/$@'
 alias py='python3'
 alias pym='python3 manage.py'
+alias serve_markdown='python3 -m ReadEm.serve'
 
 # FUNCTIONS
 # =========

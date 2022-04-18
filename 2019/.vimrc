@@ -156,6 +156,8 @@ set wildignore+=*/logcheck-web/log/*,*/public/logcheck-*
 set wildignore+=*/public/ckeditor-*,*/public/packs/*
 set wildignore+=*/coverage/*,*/node_modules/*
 
+let g:ctrlp_custom_ignore = '\vnode_modules'
+
 " emmet
 " -----
 " Add abbreviations for jsx
