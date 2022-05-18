@@ -118,7 +118,7 @@ alias sz='source ~/.zshrc'
 alias asp='cd /Users/$USER/dev/asp-django/asp/$@'
 alias py='python3'
 alias pym='python3 manage.py'
-alias serve_markdown='python3 -m ReadEm.serve'
+alias serve_markdown='markserv'
 
 # FUNCTIONS
 # =========
