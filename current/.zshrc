@@ -102,23 +102,22 @@ source $ZSH/oh-my-zsh.sh
 # ALIASES
 # =======
 alias ls="ls -a"
+alias which="which -a"
 alias dev='cd /Users/$USER/dev/$@'
-alias logcheck='cd /Users/$USER/dev/logcheck/$@'
-alias lw='cd /Users/$USER/dev/logcheck/logcheck-web/$@'
-alias li='cd /Users/$USER/dev/logcheck/logcheck-ios/$@'
-alias inf='cd /Users/$USER/dev/logcheck/infrastructure/$@'
-alias samps='cd /Users/$USER/dev/logcheck/logcheck-api-samples/$@'
-alias dotfiles='cd /Users/$USER/dotfiles/$@'
-alias fs='foreman start'
-alias zrc='vim ~/.zshrc'
-alias vrc='vim ~/.vimrc'
+alias dfi='cd /Users/$USER/dotfiles/current/$@'
+# TODO: Add messages e.g. `Reloaded ~/.zshrc!`
+# TODO: Place into general function?
 alias sz='source ~/.zshrc'
+alias sv='source ~/.vimrc'
+alias tms='tmux source ~/.tmux.conf'
+alias fs='foreman start'
 
 # Python/Django aliases
 alias asp='cd /Users/$USER/dev/asp-django/asp/$@'
 alias py='python3'
 alias pym='python3 manage.py'
-alias serve_markdown='markserv'
+alias mds='markserv -p $RANDOM -b $RANDOM'
+alias mdr='readme -p $RANDOM -b $RANDOM'
 
 # FUNCTIONS
 # =========

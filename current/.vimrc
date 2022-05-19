@@ -29,7 +29,7 @@ Plug 'mattn/emmet-vim'
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'
 " Show git diff in the gutter
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
 " Colorscheme
 Plug 'morhetz/gruvbox'
 " COC (Conquer of Completion)
