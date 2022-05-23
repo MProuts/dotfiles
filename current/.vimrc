@@ -1,6 +1,3 @@
-let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='hard'
-
 " ===================
 " plugin installation
 " ===================
@@ -18,6 +15,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'junegunn/seoul256.vim'
 
 " Provides [b shortcuts for switching between buffers, args, etc
 Plug 'tpope/vim-unimpaired'
@@ -70,9 +68,12 @@ map <C-l> :let @/ = ""<CR>
 " -------
 " turn on syntax highlighting and set colorscheme
 syntax on
-" set colorscheme
-colorscheme gruvbox
-set background=light
+" colorscheme gruvbox
+" let g:gruvbox_contrast_light='hard'
+" let g:gruvbox_contrast_dark='hard'
+
+colorscheme seoul256
+
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -118,9 +119,9 @@ cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " use 'cp' in normal mode to copy the current path
 nmap cp :let @* = expand("%")<CR>
 " edit config
-nnoremap gec :e $MYVIMRC<CR>
+nnoremap grc :edit $MYVIMRC<CR>
 " reload config
-nnoremap grc :so $MYVIMRC<CR>
+nnoremap grr :source $MYVIMRC<CR>
 " move lines in normal mode
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
