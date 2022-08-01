@@ -111,6 +111,7 @@ alias sz='source ~/.zshrc'
 alias sv='source ~/.vimrc'
 alias tms='tmux source ~/.tmux.conf'
 alias fs='foreman start'
+alias bx='bundle exec'
 
 # Python/Django aliases
 alias asp='cd /Users/$USER/dev/asp-django/asp/$@'

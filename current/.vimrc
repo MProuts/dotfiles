@@ -16,6 +16,9 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/seoul256.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'vim-scripts/loremipsum'
 
 " Provides [b shortcuts for switching between buffers, args, etc
 Plug 'tpope/vim-unimpaired'
@@ -80,7 +83,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-
 " show line numbers
 set number
 " suppress “No write since last change” message
@@ -104,6 +106,8 @@ set smartcase
 set nofoldenable
 " enable enhanced matching e.g. between do/end in ruby
 runtime macros/matchit.vim
+" show filename at bottom of buffer
+set laststatus=2
 
 " key bindings
 " ------------
@@ -122,16 +126,25 @@ nmap cp :let @* = expand("%")<CR>
 nnoremap grc :edit $MYVIMRC<CR>
 " reload config
 nnoremap grr :source $MYVIMRC<CR>
+
+nnoremap gcoc :edit ~/.vim/plugin/coc_setup.vim<CR>
 " move lines in normal mode
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 " move lines in visual mode
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+" perform splits same as tmux
+nnoremap \| :botright vsp<CR>
+nnoremap _ :botright sp<CR>
 
 " =============
 " plugin config
 " =============
+"
+" CoC
+" ---
+" see ~/.vim/plugin/coc_setup.vim
 
 " easy-align
 " ----------
