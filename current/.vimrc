@@ -18,7 +18,7 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/seoul256.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
-Plug 'vim-scripts/loremipsum'
+Plug 'nelstrom/vim-visual-star-search'
 
 " Provides [b shortcuts for switching between buffers, args, etc
 Plug 'tpope/vim-unimpaired'
@@ -119,7 +119,7 @@ cabbrev E Explore
 " <leader> o to open a file
 map <leader>o :e 
 " expand %% to current buffer directory in command
-cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+" cnoremap <expr> %%  getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " use 'cp' in normal mode to copy the current path
 nmap cp :let @* = expand("%")<CR>
 " edit config
